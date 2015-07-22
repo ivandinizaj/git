@@ -26,14 +26,6 @@ Para retirar o arquivo `file.txt` do HEAD
 $ git reset HEAD file.txt 
 ```
 
-```
-$ git revert HEAD~2
-```
-
-```
-$ git revert HEAD~1 
-```
-
 ## Atualizar
 
 Para atualizar seu repositório local com a mais nova versão
@@ -47,10 +39,6 @@ Adiciona o git repositorio
 ```
 $ git remote add upstream repositorio.git 
 ````
-
-```
-$ git reset --soft HEAD^
-```
 
 
 ##Tag
