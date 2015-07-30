@@ -1,12 +1,18 @@
 ## Atualizar dados
 
 
-### Caso deseje substituir o login
+### Verificar configurações gerais.
+
+```
+$ git config --list
+```
+
+### Para trocar o login
 ```
 $ git config --global user.name "seu usuário"
 ```
 
-### Caso deseje substituir o e-mail
+### Para trocar o e-mail
 
 ```
 $ git config --global user.email seuemail@example.com
