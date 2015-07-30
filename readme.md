@@ -3,16 +3,22 @@
 
 ### Caso deseje substituir o login
 ```
-$ git congig --global user.name "seu usuário"
+$ git config --global user.name "seu usuário"
 ```
 
 ### Caso deseje substituir o e-mail
 
 ```
-$ git congig --global user.email seuemail@example.com
+$ git config --global user.email seuemail@example.com
 ```
 
-##HEAD
+## Para salvar senhas: 
+	
+1. `$ git config --global credential.helper store`
+2. `$ git push -u origin seu-branch`
+
+---
+## HEAD
 
 Remover todos os arquivos que foram `add` no HEAD
 
@@ -26,6 +32,34 @@ Para retirar o arquivo `file.txt` do HEAD
 $ git reset HEAD file.txt 
 ```
 
+```
+$ git revert HEAD~2
+```
+
+```
+$ git revert HEAD~1 
+```
+
+---
+## Commit
+
+### Cancelar um commit local.
+
+windows
+```
+$ git reset --soft HEAD~
+```
+
+Linux, Mac
+```
+$ git reset --soft HEAD^
+```
+### Adicionar Arquivos ao commit atual
+```
+$ git add seu-arquivo
+$ git commit --amend --no-edit
+```
+---
 ## Atualizar
 
 Para atualizar seu repositório local com a mais nova versão
@@ -40,8 +74,12 @@ Adiciona o git repositorio
 $ git remote add upstream repositorio.git 
 ````
 
+```
+$ git reset --soft HEAD^
+```
 
-##Tag
+---
+## Tag
 
 Criar tag Anotada
 
@@ -61,7 +99,8 @@ Subir tag para repositório
 $ git push origin v1.5
 ```
 
-##Diff
+---
+## Diff
 
 Compara dois branchs
 
@@ -69,7 +108,8 @@ Compara dois branchs
 $ git diff branch_1..branch_2
 ```
 
-##Remote
+---
+## Remote
 
 Alterar repositório
 
@@ -89,8 +129,8 @@ Atualizar com **repositório** com o branch que escolher
 $ git pull origin master
 ```
 
-
-##Merge
+---
+## Merge
 
 
 Caso esteja no `master`  irá unir todos os arquivos do `1-correcao-bug-menu`
@@ -99,6 +139,7 @@ Caso esteja no `master`  irá unir todos os arquivos do `1-correcao-bug-menu`
 $ git merge 1-correcao-bug-menu
 ```
 
+---
 ## Branch
 
 Mostra todos os branchs do local
@@ -126,7 +167,7 @@ Excluir um branch no **repositório**
 $ git push origin :branch 
 ```
 
-
+---
 ## Plus
 
 Mostra a parte  visual do GIT
@@ -141,6 +182,7 @@ $ gitk
 $ git log --oneline 
 ```
 
+---
 ## Deu Merda
 
 Quando fez a merda de alterar arquivos em um branch errado
