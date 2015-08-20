@@ -187,7 +187,19 @@ $ gitk
 ```
 $ git log --oneline 
 ```
+---
+## Conflito
 
+Resolvendo conflitos de códigos
+
+```
+$ git checkout -b branch
+$ git checkout  master
+$ git pull origin master
+$ git checkout branch
+$ git merge master
+
+```
 ---
 ## Deu Merda
 
