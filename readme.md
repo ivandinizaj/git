@@ -78,7 +78,7 @@ Adiciona o git repositorio
 
 ```
 $ git remote add upstream repositorio.git 
-````
+```
 
 ```
 $ git reset --soft HEAD^
@@ -174,9 +174,23 @@ $ git push origin :branch
 ```
 
 ---
+## Rebase
+
+Apesar do agrupamento por finalidade ser melhor do que o agrupamento por autor,
+há como aumentar ainda mais a legibilidade do histórico, usando a opção
+`--no-ff` na hora de fazer o Merge:
+
+```
+$ git checkout feature/do-something
+$ git rebase master
+$ git checkout master
+$ git merge --no-ff feature/do-something
+```
+---
 ## Plus
 
-Mostra a parte  visual do GIT
+
+Exibe os commits em um painel visual
 
 ```
 $ gitk
@@ -208,7 +222,7 @@ Quando fez a merda de alterar arquivos em um branch errado
 ```
 $ git stash
 $ git stash branch temporario
-$ git checkout nova-consulta
+$ git checkout -b nova-consulta
 $ git merge --no-ff temporario
 $ git branch -d temporario
 ```
