@@ -18,7 +18,7 @@ Para trocar o e-mail
 $ git config --global user.email seuemail@example.com
 ```
 
-Para salvar senhas: 
+Para salvar senhas:
 
 1. `$ git config --global credential.helper store`
 2. `$ git push -u origin seu-branch`
@@ -35,7 +35,7 @@ $ git reset HEAD
 Para retirar o arquivo `file.txt` do HEAD
 
 ```
-$ git reset HEAD file.txt 
+$ git reset HEAD file.txt
 ```
 
 ---
@@ -63,13 +63,13 @@ $ git commit --amend --no-edit
 Para atualizar seu repositório local com a mais nova versão
 
 ```
-$ git pull 
+$ git pull
 ```
 
 Adiciona o git repositório
 
 ```
-$ git remote add upstream repositorio.git 
+$ git remote add upstream repositorio.git
 ```
 
 ### Para mover commits para outro branch
@@ -84,10 +84,9 @@ $ git checkout newbranch
 O exemplo abaixo move o commit C para o branch master, onde C é o hash do commit.
 
 ```
-git checkout master
-git merge C
+$ git checkout master
+$ git merge C
 ```
-
 
 ---
 ## TAG
@@ -156,7 +155,7 @@ $ git merge 1-correcao-bug-menu
 Mostra todos os branchs do local. Acrescente `-v` e veja com commits
 
 ```
-$ git branch 
+$ git branch
 ```
 
 Remover branch local
@@ -175,7 +174,7 @@ $ git branch -r
 Excluir um branch no **repositório**
 
 ```
-$ git push origin :branch 
+$ git push origin :branch
 ```
 
 ---
@@ -231,5 +230,5 @@ $ gitk
 `git log` de forma resumida
 
 ```
-$ git log --oneline 
+$ git log --oneline
 ```
