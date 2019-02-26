@@ -220,13 +220,6 @@ $ git branch -d temporario
 ---
 ## PLUS
 
-
-Exibe os commits em um painel visual
-
-```
-$ gitk
-```
-
 `git log` de forma resumida
 
 ```
